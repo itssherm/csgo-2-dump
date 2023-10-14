@@ -3,7 +3,7 @@
 #include <cstddef>
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-13 17:32:08.507963600 UTC
+// 2023-10-14 07:28:40.801713300 UTC
 
 namespace CPulseCell_Base {
     constexpr std::ptrdiff_t m_nEditorNodeID = 0x8; // PulseDocNodeID_t

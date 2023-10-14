@@ -1,7 +1,7 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-13 17:32:08.477611500 UTC
+// 2023-10-14 07:28:40.769946500 UTC
 
 pub mod CFeIndexedJiggleBone {
     pub const m_nNode: usize = 0x0; // uint32_t

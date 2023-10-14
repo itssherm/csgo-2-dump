@@ -1,5 +1,5 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-13 17:32:08.374338100 UTC
+// 2023-10-14 07:28:40.636605500 UTC
 
 public static class MaterialParamBuffer_t {
     public const nint m_value = 0x8; // CUtlBinaryBlock

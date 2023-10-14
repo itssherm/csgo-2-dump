@@ -3,7 +3,7 @@
 #include <cstddef>
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-13 17:32:08.368293700 UTC
+// 2023-10-14 07:28:40.630341900 UTC
 
 namespace CEntityComponentHelper {
     constexpr std::ptrdiff_t m_flags = 0x8; // uint32_t

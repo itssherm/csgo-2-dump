@@ -3,7 +3,7 @@
 #include <cstddef>
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-13 17:32:08.406194 UTC
+// 2023-10-14 07:28:40.673657300 UTC
 
 namespace AimMatrixOpFixedSettings_t {
     constexpr std::ptrdiff_t m_attachment = 0x0; // CAnimAttachment

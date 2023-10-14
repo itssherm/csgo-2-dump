@@ -1,7 +1,7 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-13 17:32:08.441314900 UTC
+// 2023-10-14 07:28:40.732645 UTC
 
 pub mod AimMatrixOpFixedSettings_t {
     pub const m_attachment: usize = 0x0; // CAnimAttachment

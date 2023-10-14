@@ -1,5 +1,5 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-13 17:32:08.509738500 UTC
+// 2023-10-14 07:28:40.803394100 UTC
 
 public static class CPulseCell_Base {
     public const nint m_nEditorNodeID = 0x8; // PulseDocNodeID_t
