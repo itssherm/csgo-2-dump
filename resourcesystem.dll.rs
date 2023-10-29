@@ -1,7 +1,7 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-14 07:28:40.626046400 UTC
+// 2023-10-29 01:31:13.610871300 UTC
 
 pub mod AABB_t {
     pub const m_vMinBounds: usize = 0x0; // Vector

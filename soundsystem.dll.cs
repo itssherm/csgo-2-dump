@@ -1,5 +1,5 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-14 07:28:40.782104100 UTC
+// 2023-10-29 01:31:13.879684 UTC
 
 public static class CDSPMixgroupModifier {
     public const nint m_mixgroup = 0x0; // CUtlString

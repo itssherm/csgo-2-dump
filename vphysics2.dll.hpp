@@ -3,7 +3,7 @@
 #include <cstddef>
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-14 07:28:40.758434400 UTC
+// 2023-10-29 01:31:13.832691300 UTC
 
 namespace CFeIndexedJiggleBone {
     constexpr std::ptrdiff_t m_nNode = 0x0; // uint32_t
@@ -634,12 +634,13 @@ namespace RnHull_t {
     constexpr std::ptrdiff_t m_vOrthographicAreas = 0x28; // Vector
     constexpr std::ptrdiff_t m_MassProperties = 0x34; // matrix3x4_t
     constexpr std::ptrdiff_t m_flVolume = 0x64; // float
-    constexpr std::ptrdiff_t m_Vertices = 0x68; // CUtlVector<Vector>
-    constexpr std::ptrdiff_t m_Edges = 0x80; // CUtlVector<RnHalfEdge_t>
-    constexpr std::ptrdiff_t m_Faces = 0x98; // CUtlVector<RnFace_t>
-    constexpr std::ptrdiff_t m_Planes = 0xB0; // CUtlVector<RnPlane_t>
-    constexpr std::ptrdiff_t m_nFlags = 0xC8; // uint32_t
-    constexpr std::ptrdiff_t m_pRegionSVM = 0xD0; // CRegionSVM*
+    constexpr std::ptrdiff_t m_Vertices = 0x68; // CUtlVector<RnVertex_t>
+    constexpr std::ptrdiff_t m_VertexPositions = 0x80; // CUtlVector<Vector>
+    constexpr std::ptrdiff_t m_Edges = 0x98; // CUtlVector<RnHalfEdge_t>
+    constexpr std::ptrdiff_t m_Faces = 0xB0; // CUtlVector<RnFace_t>
+    constexpr std::ptrdiff_t m_FacePlanes = 0xC8; // CUtlVector<RnPlane_t>
+    constexpr std::ptrdiff_t m_nFlags = 0xE0; // uint32_t
+    constexpr std::ptrdiff_t m_pRegionSVM = 0xE8; // CRegionSVM*
 }
 
 namespace RnMeshDesc_t {
@@ -703,6 +704,10 @@ namespace RnSphere_t {
 
 namespace RnTriangle_t {
     constexpr std::ptrdiff_t m_nIndex = 0x0; // int32_t[3]
+}
+
+namespace RnVertex_t {
+    constexpr std::ptrdiff_t m_nEdge = 0x0; // uint8_t
 }
 
 namespace RnWing_t {

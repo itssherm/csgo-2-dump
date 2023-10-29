@@ -1,5 +1,5 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-14 07:28:40.690643700 UTC
+// 2023-10-29 01:31:13.789309900 UTC
 
 public static class AimMatrixOpFixedSettings_t {
     public const nint m_attachment = 0x0; // CAnimAttachment

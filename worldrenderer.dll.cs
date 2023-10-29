@@ -1,5 +1,5 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-14 07:28:40.794448 UTC
+// 2023-10-29 01:31:14.020341100 UTC
 
 public static class AggregateLODSetup_t {
     public const nint m_vLODOrigin = 0x0; // Vector

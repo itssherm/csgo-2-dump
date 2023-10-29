@@ -1,7 +1,7 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-14 07:28:40.796413300 UTC
+// 2023-10-29 01:31:14.030755100 UTC
 
 pub mod AggregateLODSetup_t {
     pub const m_vLODOrigin: usize = 0x0; // Vector

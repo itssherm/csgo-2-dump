@@ -1,5 +1,5 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-14 07:28:40.764251600 UTC
+// 2023-10-29 01:31:13.837843700 UTC
 
 public static class CFeIndexedJiggleBone {
     public const nint m_nNode = 0x0; // uint32_t
@@ -630,12 +630,13 @@ public static class RnHull_t {
     public const nint m_vOrthographicAreas = 0x28; // Vector
     public const nint m_MassProperties = 0x34; // matrix3x4_t
     public const nint m_flVolume = 0x64; // float
-    public const nint m_Vertices = 0x68; // CUtlVector<Vector>
-    public const nint m_Edges = 0x80; // CUtlVector<RnHalfEdge_t>
-    public const nint m_Faces = 0x98; // CUtlVector<RnFace_t>
-    public const nint m_Planes = 0xB0; // CUtlVector<RnPlane_t>
-    public const nint m_nFlags = 0xC8; // uint32_t
-    public const nint m_pRegionSVM = 0xD0; // CRegionSVM*
+    public const nint m_Vertices = 0x68; // CUtlVector<RnVertex_t>
+    public const nint m_VertexPositions = 0x80; // CUtlVector<Vector>
+    public const nint m_Edges = 0x98; // CUtlVector<RnHalfEdge_t>
+    public const nint m_Faces = 0xB0; // CUtlVector<RnFace_t>
+    public const nint m_FacePlanes = 0xC8; // CUtlVector<RnPlane_t>
+    public const nint m_nFlags = 0xE0; // uint32_t
+    public const nint m_pRegionSVM = 0xE8; // CRegionSVM*
 }
 
 public static class RnMeshDesc_t {
@@ -699,6 +700,10 @@ public static class RnSphere_t {
 
 public static class RnTriangle_t {
     public const nint m_nIndex = 0x0; // int32_t[3]
+}
+
+public static class RnVertex_t {
+    public const nint m_nEdge = 0x0; // uint8_t
 }
 
 public static class RnWing_t {

@@ -3,7 +3,7 @@
 #include <cstddef>
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-14 07:28:40.863516100 UTC
+// 2023-10-29 01:31:14.177522100 UTC
 
 namespace CBaseRendererSource2 {
     constexpr std::ptrdiff_t m_flRadiusScale = 0x200; // CParticleCollectionRendererFloatInput
