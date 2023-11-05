@@ -1,27 +1,29 @@
-// Created using https://github.com/a2x/cs2-dumper
-// 2023-10-29 01:31:13.667558800 UTC
+/*
+ * Created using https://github.com/a2x/cs2-dumper
+ * Sat, 4 Nov 2023 18:11:35 +0000
+ */
 
-public static class MaterialParamBuffer_t {
+public static class MaterialParamBuffer_t { // MaterialParam_t
     public const nint m_value = 0x8; // CUtlBinaryBlock
 }
 
-public static class MaterialParamFloat_t {
+public static class MaterialParamFloat_t { // MaterialParam_t
     public const nint m_flValue = 0x8; // float
 }
 
-public static class MaterialParamInt_t {
+public static class MaterialParamInt_t { // MaterialParam_t
     public const nint m_nValue = 0x8; // int32_t
 }
 
-public static class MaterialParamString_t {
+public static class MaterialParamString_t { // MaterialParam_t
     public const nint m_value = 0x8; // CUtlString
 }
 
-public static class MaterialParamTexture_t {
+public static class MaterialParamTexture_t { // MaterialParam_t
     public const nint m_pValue = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
 }
 
-public static class MaterialParamVector_t {
+public static class MaterialParamVector_t { // MaterialParam_t
     public const nint m_value = 0x8; // Vector4D
 }
 

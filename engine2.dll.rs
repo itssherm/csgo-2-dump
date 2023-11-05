@@ -1,7 +1,15 @@
+/*
+ * Created using https://github.com/a2x/cs2-dumper
+ * Sat, 4 Nov 2023 18:11:35 +0000
+ */
+
 #![allow(non_snake_case, non_upper_case_globals)]
 
-// Created using https://github.com/a2x/cs2-dumper
-// 2023-10-29 01:31:13.663631800 UTC
+pub mod CEmptyEntityInstance {
+}
+
+pub mod CEntityComponent {
+}
 
 pub mod CEntityComponentHelper {
     pub const m_flags: usize = 0x8; // uint32_t
@@ -38,8 +46,11 @@ pub mod CNetworkVarChainer {
     pub const m_PathIndex: usize = 0x20; // ChangeAccessorFieldPathIndex_t
 }
 
-pub mod CScriptComponent {
+pub mod CScriptComponent { // CEntityComponent
     pub const m_scriptClassName: usize = 0x30; // CUtlSymbolLarge
+}
+
+pub mod CVariantDefaultAllocator {
 }
 
 pub mod EngineLoopState_t {
@@ -59,7 +70,13 @@ pub mod EntComponentInfo_t {
     pub const m_pBaseClassComponentHelper: usize = 0x60; // CEntityComponentHelper*
 }
 
-pub mod EventAdvanceTick_t {
+pub mod EntInput_t {
+}
+
+pub mod EntOutput_t {
+}
+
+pub mod EventAdvanceTick_t { // EventSimulate_t
     pub const m_nCurrentTick: usize = 0x30; // int32_t
     pub const m_nCurrentTickThisFrame: usize = 0x34; // int32_t
     pub const m_nTotalTicksThisFrame: usize = 0x38; // int32_t
@@ -68,6 +85,9 @@ pub mod EventAdvanceTick_t {
 
 pub mod EventAppShutdown_t {
     pub const m_nDummy0: usize = 0x0; // int32_t
+}
+
+pub mod EventClientAdvanceTick_t { // EventAdvanceTick_t
 }
 
 pub mod EventClientFrameSimulate_t {
@@ -84,6 +104,9 @@ pub mod EventClientOutput_t {
     pub const m_bRenderOnly: usize = 0x34; // bool
 }
 
+pub mod EventClientPauseSimulate_t { // EventSimulate_t
+}
+
 pub mod EventClientPollInput_t {
     pub const m_LoopState: usize = 0x0; // EngineLoopState_t
     pub const m_flRealTime: usize = 0x28; // float
@@ -91,6 +114,9 @@ pub mod EventClientPollInput_t {
 
 pub mod EventClientPollNetworking_t {
     pub const m_nTickCount: usize = 0x0; // int32_t
+}
+
+pub mod EventClientPostAdvanceTick_t { // EventPostAdvanceTick_t
 }
 
 pub mod EventClientPostOutput_t {
@@ -101,6 +127,9 @@ pub mod EventClientPostOutput_t {
     pub const m_bRenderOnly: usize = 0x38; // bool
 }
 
+pub mod EventClientPostSimulate_t { // EventSimulate_t
+}
+
 pub mod EventClientPreOutput_t {
     pub const m_LoopState: usize = 0x0; // EngineLoopState_t
     pub const m_flRenderTime: usize = 0x28; // double
@@ -108,6 +137,12 @@ pub mod EventClientPreOutput_t {
     pub const m_flRenderFrameTimeUnbounded: usize = 0x38; // double
     pub const m_flRealTime: usize = 0x40; // float
     pub const m_bRenderOnly: usize = 0x44; // bool
+}
+
+pub mod EventClientPreSimulate_t { // EventSimulate_t
+}
+
+pub mod EventClientPredictionPostNetupdate_t {
 }
 
 pub mod EventClientProcessGameInput_t {
@@ -121,6 +156,9 @@ pub mod EventClientProcessInput_t {
     pub const m_flRealTime: usize = 0x28; // float
 }
 
+pub mod EventClientProcessNetworking_t {
+}
+
 pub mod EventClientSceneSystemThreadStateChange_t {
     pub const m_bThreadsActive: usize = 0x0; // bool
 }
@@ -130,11 +168,17 @@ pub mod EventClientSendInput_t {
     pub const m_nAdditionalClientCommandsToCreate: usize = 0x4; // int32_t
 }
 
+pub mod EventClientSimulate_t { // EventSimulate_t
+}
+
 pub mod EventFrameBoundary_t {
     pub const m_flFrameTime: usize = 0x0; // float
 }
 
-pub mod EventPostAdvanceTick_t {
+pub mod EventModInitialized_t {
+}
+
+pub mod EventPostAdvanceTick_t { // EventSimulate_t
     pub const m_nCurrentTick: usize = 0x30; // int32_t
     pub const m_nCurrentTickThisFrame: usize = 0x34; // int32_t
     pub const m_nTotalTicksThisFrame: usize = 0x38; // int32_t
@@ -151,6 +195,24 @@ pub mod EventPreDataUpdate_t {
 
 pub mod EventProfileStorageAvailable_t {
     pub const m_nSplitScreenSlot: usize = 0x0; // CSplitScreenSlot
+}
+
+pub mod EventServerAdvanceTick_t { // EventAdvanceTick_t
+}
+
+pub mod EventServerPollNetworking_t { // EventSimulate_t
+}
+
+pub mod EventServerPostAdvanceTick_t { // EventPostAdvanceTick_t
+}
+
+pub mod EventServerPostSimulate_t { // EventSimulate_t
+}
+
+pub mod EventServerProcessNetworking_t { // EventSimulate_t
+}
+
+pub mod EventServerSimulate_t { // EventSimulate_t
 }
 
 pub mod EventSetTime_t {
@@ -174,4 +236,7 @@ pub mod EventSimulate_t {
     pub const m_LoopState: usize = 0x0; // EngineLoopState_t
     pub const m_bFirstTick: usize = 0x28; // bool
     pub const m_bLastTick: usize = 0x29; // bool
+}
+
+pub mod EventSplitScreenStateChanged_t {
 }

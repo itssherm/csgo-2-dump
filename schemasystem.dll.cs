@@ -1,5 +1,7 @@
-// Created using https://github.com/a2x/cs2-dumper
-// 2023-10-29 01:31:13.607254600 UTC
+/*
+ * Created using https://github.com/a2x/cs2-dumper
+ * Sat, 4 Nov 2023 18:11:35 +0000
+ */
 
 public static class CExampleSchemaVData_Monomorphic {
     public const nint m_nExample1 = 0x0; // int32_t
@@ -10,11 +12,11 @@ public static class CExampleSchemaVData_PolymorphicBase {
     public const nint m_nBase = 0x8; // int32_t
 }
 
-public static class CExampleSchemaVData_PolymorphicDerivedA {
+public static class CExampleSchemaVData_PolymorphicDerivedA { // CExampleSchemaVData_PolymorphicBase
     public const nint m_nDerivedA = 0x10; // int32_t
 }
 
-public static class CExampleSchemaVData_PolymorphicDerivedB {
+public static class CExampleSchemaVData_PolymorphicDerivedB { // CExampleSchemaVData_PolymorphicBase
     public const nint m_nDerivedB = 0x10; // int32_t
 }
 
@@ -41,6 +43,9 @@ public static class CSchemaSystemInternalRegistration {
     public const nint m_stringTokenWithStorage = 0x150; // CUtlStringTokenWithStorage
     public const nint m_ResourceTypes = 0x168; // CResourceArray<CResourcePointer<CResourceString>>
     public const nint m_KV3 = 0x170; // KeyValues3
+}
+
+public static class InfoForResourceTypeCResourceManifestInternal {
 }
 
 public static class ResourceId_t {

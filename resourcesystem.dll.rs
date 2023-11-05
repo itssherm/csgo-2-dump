@@ -1,7 +1,9 @@
-#![allow(non_snake_case, non_upper_case_globals)]
+/*
+ * Created using https://github.com/a2x/cs2-dumper
+ * Sat, 4 Nov 2023 18:11:35 +0000
+ */
 
-// Created using https://github.com/a2x/cs2-dumper
-// 2023-10-29 01:31:13.610871300 UTC
+#![allow(non_snake_case, non_upper_case_globals)]
 
 pub mod AABB_t {
     pub const m_vMinBounds: usize = 0x0; // Vector
@@ -51,6 +53,138 @@ pub mod FuseFunctionIndex_t {
 
 pub mod FuseVariableIndex_t {
     pub const m_Value: usize = 0x0; // uint16_t
+}
+
+pub mod InfoForResourceTypeCAnimData {
+}
+
+pub mod InfoForResourceTypeCAnimationGroup {
+}
+
+pub mod InfoForResourceTypeCCSGOEconItem {
+}
+
+pub mod InfoForResourceTypeCChoreoSceneFileData {
+}
+
+pub mod InfoForResourceTypeCCompositeMaterialKit {
+}
+
+pub mod InfoForResourceTypeCDACGameDefsData {
+}
+
+pub mod InfoForResourceTypeCDOTANovelsList {
+}
+
+pub mod InfoForResourceTypeCDOTAPatchNotesList {
+}
+
+pub mod InfoForResourceTypeCDotaItemDefinitionResource {
+}
+
+pub mod InfoForResourceTypeCEntityLump {
+}
+
+pub mod InfoForResourceTypeCJavaScriptResource {
+}
+
+pub mod InfoForResourceTypeCModel {
+}
+
+pub mod InfoForResourceTypeCMorphSetData {
+}
+
+pub mod InfoForResourceTypeCNmClip {
+}
+
+pub mod InfoForResourceTypeCNmSkeleton {
+}
+
+pub mod InfoForResourceTypeCPanoramaDynamicImages {
+}
+
+pub mod InfoForResourceTypeCPanoramaLayout {
+}
+
+pub mod InfoForResourceTypeCPanoramaStyle {
+}
+
+pub mod InfoForResourceTypeCPhysAggregateData {
+}
+
+pub mod InfoForResourceTypeCPostProcessingResource {
+}
+
+pub mod InfoForResourceTypeCRenderMesh {
+}
+
+pub mod InfoForResourceTypeCResponseRulesList {
+}
+
+pub mod InfoForResourceTypeCSequenceGroupData {
+}
+
+pub mod InfoForResourceTypeCSmartProp {
+}
+
+pub mod InfoForResourceTypeCTextureBase {
+}
+
+pub mod InfoForResourceTypeCTypeScriptResource {
+}
+
+pub mod InfoForResourceTypeCVDataResource {
+}
+
+pub mod InfoForResourceTypeCVMixListResource {
+}
+
+pub mod InfoForResourceTypeCVPhysXSurfacePropertiesList {
+}
+
+pub mod InfoForResourceTypeCVSoundEventScriptList {
+}
+
+pub mod InfoForResourceTypeCVSoundStackScriptList {
+}
+
+pub mod InfoForResourceTypeCVoxelVisibility {
+}
+
+pub mod InfoForResourceTypeCWorldNode {
+}
+
+pub mod InfoForResourceTypeIAnimGraphModelBinding {
+}
+
+pub mod InfoForResourceTypeIMaterial2 {
+}
+
+pub mod InfoForResourceTypeIParticleSnapshot {
+}
+
+pub mod InfoForResourceTypeIParticleSystemDefinition {
+}
+
+pub mod InfoForResourceTypeIPulseGraphDef {
+}
+
+pub mod InfoForResourceTypeIVectorGraphic {
+}
+
+pub mod InfoForResourceTypeManifestTestResource_t {
+}
+
+pub mod InfoForResourceTypeProceduralTestResource_t {
+}
+
+pub mod InfoForResourceTypeTestResource_t {
+}
+
+pub mod InfoForResourceTypeVSound_t {
+}
+
+pub mod InfoForResourceTypeWorld_t {
 }
 
 pub mod ManifestTestResource_t {

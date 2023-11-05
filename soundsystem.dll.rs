@@ -1,7 +1,9 @@
-#![allow(non_snake_case, non_upper_case_globals)]
+/*
+ * Created using https://github.com/a2x/cs2-dumper
+ * Sat, 4 Nov 2023 18:11:35 +0000
+ */
 
-// Created using https://github.com/a2x/cs2-dumper
-// 2023-10-29 01:31:13.895342 UTC
+#![allow(non_snake_case, non_upper_case_globals)]
 
 pub mod CDSPMixgroupModifier {
     pub const m_mixgroup: usize = 0x0; // CUtlString
@@ -21,7 +23,7 @@ pub mod CDspPresetModifierList {
     pub const m_modifiers: usize = 0x8; // CUtlVector<CDSPMixgroupModifier>
 }
 
-pub mod CSosGroupActionLimitSchema {
+pub mod CSosGroupActionLimitSchema { // CSosGroupActionSchema
     pub const m_nMaxCount: usize = 0x18; // int32_t
     pub const m_nStopType: usize = 0x1C; // SosActionStopType_t
     pub const m_nSortType: usize = 0x20; // SosActionSortType_t
@@ -33,7 +35,7 @@ pub mod CSosGroupActionSchema {
     pub const m_actionInstanceType: usize = 0x14; // ActionType_t
 }
 
-pub mod CSosGroupActionSetSoundeventParameterSchema {
+pub mod CSosGroupActionSetSoundeventParameterSchema { // CSosGroupActionSchema
     pub const m_nMaxCount: usize = 0x18; // int32_t
     pub const m_flMinValue: usize = 0x1C; // float
     pub const m_flMaxValue: usize = 0x20; // float
@@ -41,7 +43,7 @@ pub mod CSosGroupActionSetSoundeventParameterSchema {
     pub const m_nSortType: usize = 0x30; // SosActionSortType_t
 }
 
-pub mod CSosGroupActionTimeLimitSchema {
+pub mod CSosGroupActionTimeLimitSchema { // CSosGroupActionSchema
     pub const m_flMaxDuration: usize = 0x18; // float
 }
 
@@ -52,7 +54,7 @@ pub mod CSosGroupBranchPattern {
     pub const m_bMatchOpvar: usize = 0xB; // bool
 }
 
-pub mod CSosGroupMatchPattern {
+pub mod CSosGroupMatchPattern { // CSosGroupBranchPattern
     pub const m_matchSoundEventName: usize = 0x10; // CUtlString
     pub const m_matchSoundEventSubString: usize = 0x18; // CUtlString
     pub const m_flEntIndex: usize = 0x20; // float

@@ -1,5 +1,7 @@
-// Created using https://github.com/a2x/cs2-dumper
-// 2023-10-29 01:31:14.020341100 UTC
+/*
+ * Created using https://github.com/a2x/cs2-dumper
+ * Sat, 4 Nov 2023 18:11:36 +0000
+ */
 
 public static class AggregateLODSetup_t {
     public const nint m_vLODOrigin = 0x0; // Vector
@@ -42,6 +44,9 @@ public static class BaseSceneObjectOverride_t {
     public const nint m_nSceneObjectIndex = 0x0; // uint32_t
 }
 
+public static class CEntityComponent {
+}
+
 public static class CEntityIdentity {
     public const nint m_nameStringableIndex = 0x14; // int32_t
     public const nint m_name = 0x18; // CUtlSymbolLarge
@@ -62,7 +67,7 @@ public static class CEntityInstance {
     public const nint m_CScriptComponent = 0x28; // CScriptComponent*
 }
 
-public static class CScriptComponent {
+public static class CScriptComponent { // CEntityComponent
     public const nint m_scriptClassName = 0x30; // CUtlSymbolLarge
 }
 
@@ -114,11 +119,14 @@ public static class EntityKeyValueData_t {
     public const nint m_keyValuesData = 0x20; // CUtlBinaryBlock
 }
 
-public static class ExtraVertexStreamOverride_t {
+public static class ExtraVertexStreamOverride_t { // BaseSceneObjectOverride_t
     public const nint m_nSubSceneObject = 0x4; // uint32_t
     public const nint m_nDrawCallIndex = 0x8; // uint32_t
     public const nint m_nAdditionalMeshDrawPrimitiveFlags = 0xC; // MeshDrawPrimitiveFlags_t
     public const nint m_extraBufferBinding = 0x10; // CRenderBufferBinding
+}
+
+public static class InfoForResourceTypeVMapResourceData_t {
 }
 
 public static class InfoOverlayData_t {
@@ -134,7 +142,7 @@ public static class InfoOverlayData_t {
     public const nint m_nSequenceOverride = 0x6C; // int32_t
 }
 
-public static class MaterialOverride_t {
+public static class MaterialOverride_t { // BaseSceneObjectOverride_t
     public const nint m_nSubSceneObject = 0x4; // uint32_t
     public const nint m_nDrawCallIndex = 0x8; // uint32_t
     public const nint m_pMaterial = 0x10; // CStrongHandle<InfoForResourceTypeIMaterial2>
@@ -166,13 +174,15 @@ public static class SceneObject_t {
     public const nint m_skin = 0x50; // CUtlString
     public const nint m_nObjectTypeFlags = 0x58; // ObjectTypeFlags_t
     public const nint m_vLightingOrigin = 0x5C; // Vector
-    public const nint m_nLightGroup = 0x68; // uint32_t
-    public const nint m_nOverlayRenderOrder = 0x6C; // int16_t
-    public const nint m_nLODOverride = 0x6E; // int16_t
-    public const nint m_nCubeMapPrecomputedHandshake = 0x70; // int32_t
-    public const nint m_nLightProbeVolumePrecomputedHandshake = 0x74; // int32_t
-    public const nint m_renderableModel = 0x80; // CStrongHandle<InfoForResourceTypeCModel>
-    public const nint m_renderable = 0x88; // CStrongHandle<InfoForResourceTypeCRenderMesh>
+    public const nint m_nOverlayRenderOrder = 0x68; // int16_t
+    public const nint m_nLODOverride = 0x6A; // int16_t
+    public const nint m_nCubeMapPrecomputedHandshake = 0x6C; // int32_t
+    public const nint m_nLightProbeVolumePrecomputedHandshake = 0x70; // int32_t
+    public const nint m_renderableModel = 0x78; // CStrongHandle<InfoForResourceTypeCModel>
+    public const nint m_renderable = 0x80; // CStrongHandle<InfoForResourceTypeCRenderMesh>
+}
+
+public static class VMapResourceData_t {
 }
 
 public static class VoxelVisBlockOffset_t {

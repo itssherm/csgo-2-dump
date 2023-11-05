@@ -1,7 +1,9 @@
-#![allow(non_snake_case, non_upper_case_globals)]
+/*
+ * Created using https://github.com/a2x/cs2-dumper
+ * Sat, 4 Nov 2023 18:11:36 +0000
+ */
 
-// Created using https://github.com/a2x/cs2-dumper
-// 2023-10-29 01:31:14.030755100 UTC
+#![allow(non_snake_case, non_upper_case_globals)]
 
 pub mod AggregateLODSetup_t {
     pub const m_vLODOrigin: usize = 0x0; // Vector
@@ -44,6 +46,9 @@ pub mod BaseSceneObjectOverride_t {
     pub const m_nSceneObjectIndex: usize = 0x0; // uint32_t
 }
 
+pub mod CEntityComponent {
+}
+
 pub mod CEntityIdentity {
     pub const m_nameStringableIndex: usize = 0x14; // int32_t
     pub const m_name: usize = 0x18; // CUtlSymbolLarge
@@ -64,7 +69,7 @@ pub mod CEntityInstance {
     pub const m_CScriptComponent: usize = 0x28; // CScriptComponent*
 }
 
-pub mod CScriptComponent {
+pub mod CScriptComponent { // CEntityComponent
     pub const m_scriptClassName: usize = 0x30; // CUtlSymbolLarge
 }
 
@@ -116,11 +121,14 @@ pub mod EntityKeyValueData_t {
     pub const m_keyValuesData: usize = 0x20; // CUtlBinaryBlock
 }
 
-pub mod ExtraVertexStreamOverride_t {
+pub mod ExtraVertexStreamOverride_t { // BaseSceneObjectOverride_t
     pub const m_nSubSceneObject: usize = 0x4; // uint32_t
     pub const m_nDrawCallIndex: usize = 0x8; // uint32_t
     pub const m_nAdditionalMeshDrawPrimitiveFlags: usize = 0xC; // MeshDrawPrimitiveFlags_t
     pub const m_extraBufferBinding: usize = 0x10; // CRenderBufferBinding
+}
+
+pub mod InfoForResourceTypeVMapResourceData_t {
 }
 
 pub mod InfoOverlayData_t {
@@ -136,7 +144,7 @@ pub mod InfoOverlayData_t {
     pub const m_nSequenceOverride: usize = 0x6C; // int32_t
 }
 
-pub mod MaterialOverride_t {
+pub mod MaterialOverride_t { // BaseSceneObjectOverride_t
     pub const m_nSubSceneObject: usize = 0x4; // uint32_t
     pub const m_nDrawCallIndex: usize = 0x8; // uint32_t
     pub const m_pMaterial: usize = 0x10; // CStrongHandle<InfoForResourceTypeIMaterial2>
@@ -168,13 +176,15 @@ pub mod SceneObject_t {
     pub const m_skin: usize = 0x50; // CUtlString
     pub const m_nObjectTypeFlags: usize = 0x58; // ObjectTypeFlags_t
     pub const m_vLightingOrigin: usize = 0x5C; // Vector
-    pub const m_nLightGroup: usize = 0x68; // uint32_t
-    pub const m_nOverlayRenderOrder: usize = 0x6C; // int16_t
-    pub const m_nLODOverride: usize = 0x6E; // int16_t
-    pub const m_nCubeMapPrecomputedHandshake: usize = 0x70; // int32_t
-    pub const m_nLightProbeVolumePrecomputedHandshake: usize = 0x74; // int32_t
-    pub const m_renderableModel: usize = 0x80; // CStrongHandle<InfoForResourceTypeCModel>
-    pub const m_renderable: usize = 0x88; // CStrongHandle<InfoForResourceTypeCRenderMesh>
+    pub const m_nOverlayRenderOrder: usize = 0x68; // int16_t
+    pub const m_nLODOverride: usize = 0x6A; // int16_t
+    pub const m_nCubeMapPrecomputedHandshake: usize = 0x6C; // int32_t
+    pub const m_nLightProbeVolumePrecomputedHandshake: usize = 0x70; // int32_t
+    pub const m_renderableModel: usize = 0x78; // CStrongHandle<InfoForResourceTypeCModel>
+    pub const m_renderable: usize = 0x80; // CStrongHandle<InfoForResourceTypeCRenderMesh>
+}
+
+pub mod VMapResourceData_t {
 }
 
 pub mod VoxelVisBlockOffset_t {

@@ -1,9 +1,11 @@
+/*
+ * Created using https://github.com/a2x/cs2-dumper
+ * Sat, 4 Nov 2023 18:11:35 +0000
+ */
+
 #pragma once
 
 #include <cstddef>
-
-// Created using https://github.com/a2x/cs2-dumper
-// 2023-10-29 01:31:13.851822300 UTC
 
 namespace CDSPMixgroupModifier {
     constexpr std::ptrdiff_t m_mixgroup = 0x0; // CUtlString
@@ -23,7 +25,7 @@ namespace CDspPresetModifierList {
     constexpr std::ptrdiff_t m_modifiers = 0x8; // CUtlVector<CDSPMixgroupModifier>
 }
 
-namespace CSosGroupActionLimitSchema {
+namespace CSosGroupActionLimitSchema { // CSosGroupActionSchema
     constexpr std::ptrdiff_t m_nMaxCount = 0x18; // int32_t
     constexpr std::ptrdiff_t m_nStopType = 0x1C; // SosActionStopType_t
     constexpr std::ptrdiff_t m_nSortType = 0x20; // SosActionSortType_t
@@ -35,7 +37,7 @@ namespace CSosGroupActionSchema {
     constexpr std::ptrdiff_t m_actionInstanceType = 0x14; // ActionType_t
 }
 
-namespace CSosGroupActionSetSoundeventParameterSchema {
+namespace CSosGroupActionSetSoundeventParameterSchema { // CSosGroupActionSchema
     constexpr std::ptrdiff_t m_nMaxCount = 0x18; // int32_t
     constexpr std::ptrdiff_t m_flMinValue = 0x1C; // float
     constexpr std::ptrdiff_t m_flMaxValue = 0x20; // float
@@ -43,7 +45,7 @@ namespace CSosGroupActionSetSoundeventParameterSchema {
     constexpr std::ptrdiff_t m_nSortType = 0x30; // SosActionSortType_t
 }
 
-namespace CSosGroupActionTimeLimitSchema {
+namespace CSosGroupActionTimeLimitSchema { // CSosGroupActionSchema
     constexpr std::ptrdiff_t m_flMaxDuration = 0x18; // float
 }
 
@@ -54,7 +56,7 @@ namespace CSosGroupBranchPattern {
     constexpr std::ptrdiff_t m_bMatchOpvar = 0xB; // bool
 }
 
-namespace CSosGroupMatchPattern {
+namespace CSosGroupMatchPattern { // CSosGroupBranchPattern
     constexpr std::ptrdiff_t m_matchSoundEventName = 0x10; // CUtlString
     constexpr std::ptrdiff_t m_matchSoundEventSubString = 0x18; // CUtlString
     constexpr std::ptrdiff_t m_flEntIndex = 0x20; // float

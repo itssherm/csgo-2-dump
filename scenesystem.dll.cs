@@ -1,5 +1,7 @@
-// Created using https://github.com/a2x/cs2-dumper
-// 2023-10-29 01:31:13.968227700 UTC
+/*
+ * Created using https://github.com/a2x/cs2-dumper
+ * Sat, 4 Nov 2023 18:11:35 +0000
+ */
 
 public static class CSSDSEndFrameViewInfo {
     public const nint m_nViewId = 0x0; // uint64_t
@@ -17,6 +19,12 @@ public static class CSSDSMsg_LayerBase {
     public const nint m_nLayerId = 0x20; // uint64_t
     public const nint m_LayerName = 0x28; // CUtlString
     public const nint m_displayText = 0x30; // CUtlString
+}
+
+public static class CSSDSMsg_PostLayer { // CSSDSMsg_LayerBase
+}
+
+public static class CSSDSMsg_PreLayer { // CSSDSMsg_LayerBase
 }
 
 public static class CSSDSMsg_ViewRender {

@@ -1,29 +1,31 @@
+/*
+ * Created using https://github.com/a2x/cs2-dumper
+ * Sat, 4 Nov 2023 18:11:35 +0000
+ */
+
 #![allow(non_snake_case, non_upper_case_globals)]
 
-// Created using https://github.com/a2x/cs2-dumper
-// 2023-10-29 01:31:13.704767500 UTC
-
-pub mod MaterialParamBuffer_t {
+pub mod MaterialParamBuffer_t { // MaterialParam_t
     pub const m_value: usize = 0x8; // CUtlBinaryBlock
 }
 
-pub mod MaterialParamFloat_t {
+pub mod MaterialParamFloat_t { // MaterialParam_t
     pub const m_flValue: usize = 0x8; // float
 }
 
-pub mod MaterialParamInt_t {
+pub mod MaterialParamInt_t { // MaterialParam_t
     pub const m_nValue: usize = 0x8; // int32_t
 }
 
-pub mod MaterialParamString_t {
+pub mod MaterialParamString_t { // MaterialParam_t
     pub const m_value: usize = 0x8; // CUtlString
 }
 
-pub mod MaterialParamTexture_t {
+pub mod MaterialParamTexture_t { // MaterialParam_t
     pub const m_pValue: usize = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
 }
 
-pub mod MaterialParamVector_t {
+pub mod MaterialParamVector_t { // MaterialParam_t
     pub const m_value: usize = 0x8; // Vector4D
 }
 

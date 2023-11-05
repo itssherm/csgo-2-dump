@@ -1,7 +1,9 @@
-#![allow(non_snake_case, non_upper_case_globals)]
+/*
+ * Created using https://github.com/a2x/cs2-dumper
+ * Sat, 4 Nov 2023 18:11:35 +0000
+ */
 
-// Created using https://github.com/a2x/cs2-dumper
-// 2023-10-29 01:31:13.843328200 UTC
+#![allow(non_snake_case, non_upper_case_globals)]
 
 pub mod CFeIndexedJiggleBone {
     pub const m_nNode: usize = 0x0; // uint32_t
@@ -122,17 +124,17 @@ pub mod FeBoxRigid_t {
     pub const nFlags: usize = 0x32; // uint16_t
 }
 
-pub mod FeBuildBoxRigid_t {
+pub mod FeBuildBoxRigid_t { // FeBoxRigid_t
     pub const m_nPriority: usize = 0x40; // int32_t
     pub const m_nVertexMapHash: usize = 0x44; // uint32_t
 }
 
-pub mod FeBuildSphereRigid_t {
+pub mod FeBuildSphereRigid_t { // FeSphereRigid_t
     pub const m_nPriority: usize = 0x20; // int32_t
     pub const m_nVertexMapHash: usize = 0x24; // uint32_t
 }
 
-pub mod FeBuildTaperedCapsuleRigid_t {
+pub mod FeBuildTaperedCapsuleRigid_t { // FeTaperedCapsuleRigid_t
     pub const m_nPriority: usize = 0x30; // int32_t
     pub const m_nVertexMapHash: usize = 0x34; // uint32_t
 }
@@ -436,6 +438,9 @@ pub mod FourVectors2D {
     pub const y: usize = 0x10; // fltx4
 }
 
+pub mod IPhysicsPlayerController {
+}
+
 pub mod OldFeEdge_t {
     pub const m_flK: usize = 0x0; // float[3]
     pub const invA: usize = 0xC; // float
@@ -601,7 +606,7 @@ pub mod RnBodyDesc_t {
     pub const m_bHasShadowController: usize = 0xCA; // bool
 }
 
-pub mod RnCapsuleDesc_t {
+pub mod RnCapsuleDesc_t { // RnShapeDesc_t
     pub const m_Capsule: usize = 0x10; // RnCapsule_t
 }
 
@@ -621,7 +626,7 @@ pub mod RnHalfEdge_t {
     pub const m_nFace: usize = 0x3; // uint8_t
 }
 
-pub mod RnHullDesc_t {
+pub mod RnHullDesc_t { // RnShapeDesc_t
     pub const m_Hull: usize = 0x10; // RnHull_t
 }
 
@@ -641,7 +646,7 @@ pub mod RnHull_t {
     pub const m_pRegionSVM: usize = 0xE8; // CRegionSVM*
 }
 
-pub mod RnMeshDesc_t {
+pub mod RnMeshDesc_t { // RnShapeDesc_t
     pub const m_Mesh: usize = 0x10; // RnMesh_t
 }
 
@@ -691,7 +696,7 @@ pub mod RnSoftbodySpring_t {
     pub const m_flLength: usize = 0x4; // float
 }
 
-pub mod RnSphereDesc_t {
+pub mod RnSphereDesc_t { // RnShapeDesc_t
     pub const m_Sphere: usize = 0x10; // RnSphere_t
 }
 
@@ -743,6 +748,6 @@ pub mod constraint_hingeparams_t {
     pub const constraint: usize = 0x28; // constraint_breakableparams_t
 }
 
-pub mod vphysics_save_cphysicsbody_t {
+pub mod vphysics_save_cphysicsbody_t { // RnBodyDesc_t
     pub const m_nOldPointer: usize = 0xD0; // uint64_t
 }

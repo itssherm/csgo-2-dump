@@ -1,9 +1,11 @@
+/*
+ * Created using https://github.com/a2x/cs2-dumper
+ * Sat, 4 Nov 2023 18:11:36 +0000
+ */
+
 #pragma once
 
 #include <cstddef>
-
-// Created using https://github.com/a2x/cs2-dumper
-// 2023-10-29 01:31:14.008007800 UTC
 
 namespace AggregateLODSetup_t {
     constexpr std::ptrdiff_t m_vLODOrigin = 0x0; // Vector
@@ -46,6 +48,9 @@ namespace BaseSceneObjectOverride_t {
     constexpr std::ptrdiff_t m_nSceneObjectIndex = 0x0; // uint32_t
 }
 
+namespace CEntityComponent {
+}
+
 namespace CEntityIdentity {
     constexpr std::ptrdiff_t m_nameStringableIndex = 0x14; // int32_t
     constexpr std::ptrdiff_t m_name = 0x18; // CUtlSymbolLarge
@@ -66,7 +71,7 @@ namespace CEntityInstance {
     constexpr std::ptrdiff_t m_CScriptComponent = 0x28; // CScriptComponent*
 }
 
-namespace CScriptComponent {
+namespace CScriptComponent { // CEntityComponent
     constexpr std::ptrdiff_t m_scriptClassName = 0x30; // CUtlSymbolLarge
 }
 
@@ -118,11 +123,14 @@ namespace EntityKeyValueData_t {
     constexpr std::ptrdiff_t m_keyValuesData = 0x20; // CUtlBinaryBlock
 }
 
-namespace ExtraVertexStreamOverride_t {
+namespace ExtraVertexStreamOverride_t { // BaseSceneObjectOverride_t
     constexpr std::ptrdiff_t m_nSubSceneObject = 0x4; // uint32_t
     constexpr std::ptrdiff_t m_nDrawCallIndex = 0x8; // uint32_t
     constexpr std::ptrdiff_t m_nAdditionalMeshDrawPrimitiveFlags = 0xC; // MeshDrawPrimitiveFlags_t
     constexpr std::ptrdiff_t m_extraBufferBinding = 0x10; // CRenderBufferBinding
+}
+
+namespace InfoForResourceTypeVMapResourceData_t {
 }
 
 namespace InfoOverlayData_t {
@@ -138,7 +146,7 @@ namespace InfoOverlayData_t {
     constexpr std::ptrdiff_t m_nSequenceOverride = 0x6C; // int32_t
 }
 
-namespace MaterialOverride_t {
+namespace MaterialOverride_t { // BaseSceneObjectOverride_t
     constexpr std::ptrdiff_t m_nSubSceneObject = 0x4; // uint32_t
     constexpr std::ptrdiff_t m_nDrawCallIndex = 0x8; // uint32_t
     constexpr std::ptrdiff_t m_pMaterial = 0x10; // CStrongHandle<InfoForResourceTypeIMaterial2>
@@ -170,13 +178,15 @@ namespace SceneObject_t {
     constexpr std::ptrdiff_t m_skin = 0x50; // CUtlString
     constexpr std::ptrdiff_t m_nObjectTypeFlags = 0x58; // ObjectTypeFlags_t
     constexpr std::ptrdiff_t m_vLightingOrigin = 0x5C; // Vector
-    constexpr std::ptrdiff_t m_nLightGroup = 0x68; // uint32_t
-    constexpr std::ptrdiff_t m_nOverlayRenderOrder = 0x6C; // int16_t
-    constexpr std::ptrdiff_t m_nLODOverride = 0x6E; // int16_t
-    constexpr std::ptrdiff_t m_nCubeMapPrecomputedHandshake = 0x70; // int32_t
-    constexpr std::ptrdiff_t m_nLightProbeVolumePrecomputedHandshake = 0x74; // int32_t
-    constexpr std::ptrdiff_t m_renderableModel = 0x80; // CStrongHandle<InfoForResourceTypeCModel>
-    constexpr std::ptrdiff_t m_renderable = 0x88; // CStrongHandle<InfoForResourceTypeCRenderMesh>
+    constexpr std::ptrdiff_t m_nOverlayRenderOrder = 0x68; // int16_t
+    constexpr std::ptrdiff_t m_nLODOverride = 0x6A; // int16_t
+    constexpr std::ptrdiff_t m_nCubeMapPrecomputedHandshake = 0x6C; // int32_t
+    constexpr std::ptrdiff_t m_nLightProbeVolumePrecomputedHandshake = 0x70; // int32_t
+    constexpr std::ptrdiff_t m_renderableModel = 0x78; // CStrongHandle<InfoForResourceTypeCModel>
+    constexpr std::ptrdiff_t m_renderable = 0x80; // CStrongHandle<InfoForResourceTypeCRenderMesh>
+}
+
+namespace VMapResourceData_t {
 }
 
 namespace VoxelVisBlockOffset_t {

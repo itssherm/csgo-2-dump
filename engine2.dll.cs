@@ -1,5 +1,13 @@
-// Created using https://github.com/a2x/cs2-dumper
-// 2023-10-29 01:31:13.615967300 UTC
+/*
+ * Created using https://github.com/a2x/cs2-dumper
+ * Sat, 4 Nov 2023 18:11:35 +0000
+ */
+
+public static class CEmptyEntityInstance {
+}
+
+public static class CEntityComponent {
+}
 
 public static class CEntityComponentHelper {
     public const nint m_flags = 0x8; // uint32_t
@@ -36,8 +44,11 @@ public static class CNetworkVarChainer {
     public const nint m_PathIndex = 0x20; // ChangeAccessorFieldPathIndex_t
 }
 
-public static class CScriptComponent {
+public static class CScriptComponent { // CEntityComponent
     public const nint m_scriptClassName = 0x30; // CUtlSymbolLarge
+}
+
+public static class CVariantDefaultAllocator {
 }
 
 public static class EngineLoopState_t {
@@ -57,7 +68,13 @@ public static class EntComponentInfo_t {
     public const nint m_pBaseClassComponentHelper = 0x60; // CEntityComponentHelper*
 }
 
-public static class EventAdvanceTick_t {
+public static class EntInput_t {
+}
+
+public static class EntOutput_t {
+}
+
+public static class EventAdvanceTick_t { // EventSimulate_t
     public const nint m_nCurrentTick = 0x30; // int32_t
     public const nint m_nCurrentTickThisFrame = 0x34; // int32_t
     public const nint m_nTotalTicksThisFrame = 0x38; // int32_t
@@ -66,6 +83,9 @@ public static class EventAdvanceTick_t {
 
 public static class EventAppShutdown_t {
     public const nint m_nDummy0 = 0x0; // int32_t
+}
+
+public static class EventClientAdvanceTick_t { // EventAdvanceTick_t
 }
 
 public static class EventClientFrameSimulate_t {
@@ -82,6 +102,9 @@ public static class EventClientOutput_t {
     public const nint m_bRenderOnly = 0x34; // bool
 }
 
+public static class EventClientPauseSimulate_t { // EventSimulate_t
+}
+
 public static class EventClientPollInput_t {
     public const nint m_LoopState = 0x0; // EngineLoopState_t
     public const nint m_flRealTime = 0x28; // float
@@ -89,6 +112,9 @@ public static class EventClientPollInput_t {
 
 public static class EventClientPollNetworking_t {
     public const nint m_nTickCount = 0x0; // int32_t
+}
+
+public static class EventClientPostAdvanceTick_t { // EventPostAdvanceTick_t
 }
 
 public static class EventClientPostOutput_t {
@@ -99,6 +125,9 @@ public static class EventClientPostOutput_t {
     public const nint m_bRenderOnly = 0x38; // bool
 }
 
+public static class EventClientPostSimulate_t { // EventSimulate_t
+}
+
 public static class EventClientPreOutput_t {
     public const nint m_LoopState = 0x0; // EngineLoopState_t
     public const nint m_flRenderTime = 0x28; // double
@@ -106,6 +135,12 @@ public static class EventClientPreOutput_t {
     public const nint m_flRenderFrameTimeUnbounded = 0x38; // double
     public const nint m_flRealTime = 0x40; // float
     public const nint m_bRenderOnly = 0x44; // bool
+}
+
+public static class EventClientPreSimulate_t { // EventSimulate_t
+}
+
+public static class EventClientPredictionPostNetupdate_t {
 }
 
 public static class EventClientProcessGameInput_t {
@@ -119,6 +154,9 @@ public static class EventClientProcessInput_t {
     public const nint m_flRealTime = 0x28; // float
 }
 
+public static class EventClientProcessNetworking_t {
+}
+
 public static class EventClientSceneSystemThreadStateChange_t {
     public const nint m_bThreadsActive = 0x0; // bool
 }
@@ -128,11 +166,17 @@ public static class EventClientSendInput_t {
     public const nint m_nAdditionalClientCommandsToCreate = 0x4; // int32_t
 }
 
+public static class EventClientSimulate_t { // EventSimulate_t
+}
+
 public static class EventFrameBoundary_t {
     public const nint m_flFrameTime = 0x0; // float
 }
 
-public static class EventPostAdvanceTick_t {
+public static class EventModInitialized_t {
+}
+
+public static class EventPostAdvanceTick_t { // EventSimulate_t
     public const nint m_nCurrentTick = 0x30; // int32_t
     public const nint m_nCurrentTickThisFrame = 0x34; // int32_t
     public const nint m_nTotalTicksThisFrame = 0x38; // int32_t
@@ -149,6 +193,24 @@ public static class EventPreDataUpdate_t {
 
 public static class EventProfileStorageAvailable_t {
     public const nint m_nSplitScreenSlot = 0x0; // CSplitScreenSlot
+}
+
+public static class EventServerAdvanceTick_t { // EventAdvanceTick_t
+}
+
+public static class EventServerPollNetworking_t { // EventSimulate_t
+}
+
+public static class EventServerPostAdvanceTick_t { // EventPostAdvanceTick_t
+}
+
+public static class EventServerPostSimulate_t { // EventSimulate_t
+}
+
+public static class EventServerProcessNetworking_t { // EventSimulate_t
+}
+
+public static class EventServerSimulate_t { // EventSimulate_t
 }
 
 public static class EventSetTime_t {
@@ -172,4 +234,7 @@ public static class EventSimulate_t {
     public const nint m_LoopState = 0x0; // EngineLoopState_t
     public const nint m_bFirstTick = 0x28; // bool
     public const nint m_bLastTick = 0x29; // bool
+}
+
+public static class EventSplitScreenStateChanged_t {
 }

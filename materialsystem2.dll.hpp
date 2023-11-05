@@ -1,31 +1,33 @@
+/*
+ * Created using https://github.com/a2x/cs2-dumper
+ * Sat, 4 Nov 2023 18:11:35 +0000
+ */
+
 #pragma once
 
 #include <cstddef>
 
-// Created using https://github.com/a2x/cs2-dumper
-// 2023-10-29 01:31:13.666691200 UTC
-
-namespace MaterialParamBuffer_t {
+namespace MaterialParamBuffer_t { // MaterialParam_t
     constexpr std::ptrdiff_t m_value = 0x8; // CUtlBinaryBlock
 }
 
-namespace MaterialParamFloat_t {
+namespace MaterialParamFloat_t { // MaterialParam_t
     constexpr std::ptrdiff_t m_flValue = 0x8; // float
 }
 
-namespace MaterialParamInt_t {
+namespace MaterialParamInt_t { // MaterialParam_t
     constexpr std::ptrdiff_t m_nValue = 0x8; // int32_t
 }
 
-namespace MaterialParamString_t {
+namespace MaterialParamString_t { // MaterialParam_t
     constexpr std::ptrdiff_t m_value = 0x8; // CUtlString
 }
 
-namespace MaterialParamTexture_t {
+namespace MaterialParamTexture_t { // MaterialParam_t
     constexpr std::ptrdiff_t m_pValue = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
 }
 
-namespace MaterialParamVector_t {
+namespace MaterialParamVector_t { // MaterialParam_t
     constexpr std::ptrdiff_t m_value = 0x8; // Vector4D
 }
 

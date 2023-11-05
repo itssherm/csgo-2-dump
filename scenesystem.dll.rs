@@ -1,7 +1,9 @@
-#![allow(non_snake_case, non_upper_case_globals)]
+/*
+ * Created using https://github.com/a2x/cs2-dumper
+ * Sat, 4 Nov 2023 18:11:36 +0000
+ */
 
-// Created using https://github.com/a2x/cs2-dumper
-// 2023-10-29 01:31:14.004494900 UTC
+#![allow(non_snake_case, non_upper_case_globals)]
 
 pub mod CSSDSEndFrameViewInfo {
     pub const m_nViewId: usize = 0x0; // uint64_t
@@ -19,6 +21,12 @@ pub mod CSSDSMsg_LayerBase {
     pub const m_nLayerId: usize = 0x20; // uint64_t
     pub const m_LayerName: usize = 0x28; // CUtlString
     pub const m_displayText: usize = 0x30; // CUtlString
+}
+
+pub mod CSSDSMsg_PostLayer { // CSSDSMsg_LayerBase
+}
+
+pub mod CSSDSMsg_PreLayer { // CSSDSMsg_LayerBase
 }
 
 pub mod CSSDSMsg_ViewRender {

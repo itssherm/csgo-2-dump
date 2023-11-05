@@ -1,9 +1,11 @@
+/*
+ * Created using https://github.com/a2x/cs2-dumper
+ * Sat, 4 Nov 2023 18:11:35 +0000
+ */
+
 #pragma once
 
 #include <cstddef>
-
-// Created using https://github.com/a2x/cs2-dumper
-// 2023-10-29 01:31:13.606827500 UTC
 
 namespace CExampleSchemaVData_Monomorphic {
     constexpr std::ptrdiff_t m_nExample1 = 0x0; // int32_t
@@ -14,11 +16,11 @@ namespace CExampleSchemaVData_PolymorphicBase {
     constexpr std::ptrdiff_t m_nBase = 0x8; // int32_t
 }
 
-namespace CExampleSchemaVData_PolymorphicDerivedA {
+namespace CExampleSchemaVData_PolymorphicDerivedA { // CExampleSchemaVData_PolymorphicBase
     constexpr std::ptrdiff_t m_nDerivedA = 0x10; // int32_t
 }
 
-namespace CExampleSchemaVData_PolymorphicDerivedB {
+namespace CExampleSchemaVData_PolymorphicDerivedB { // CExampleSchemaVData_PolymorphicBase
     constexpr std::ptrdiff_t m_nDerivedB = 0x10; // int32_t
 }
 
@@ -45,6 +47,9 @@ namespace CSchemaSystemInternalRegistration {
     constexpr std::ptrdiff_t m_stringTokenWithStorage = 0x150; // CUtlStringTokenWithStorage
     constexpr std::ptrdiff_t m_ResourceTypes = 0x168; // CResourceArray<CResourcePointer<CResourceString>>
     constexpr std::ptrdiff_t m_KV3 = 0x170; // KeyValues3
+}
+
+namespace InfoForResourceTypeCResourceManifestInternal {
 }
 
 namespace ResourceId_t {

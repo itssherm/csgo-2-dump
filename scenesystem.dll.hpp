@@ -1,9 +1,11 @@
+/*
+ * Created using https://github.com/a2x/cs2-dumper
+ * Sat, 4 Nov 2023 18:11:35 +0000
+ */
+
 #pragma once
 
 #include <cstddef>
-
-// Created using https://github.com/a2x/cs2-dumper
-// 2023-10-29 01:31:13.930575 UTC
 
 namespace CSSDSEndFrameViewInfo {
     constexpr std::ptrdiff_t m_nViewId = 0x0; // uint64_t
@@ -21,6 +23,12 @@ namespace CSSDSMsg_LayerBase {
     constexpr std::ptrdiff_t m_nLayerId = 0x20; // uint64_t
     constexpr std::ptrdiff_t m_LayerName = 0x28; // CUtlString
     constexpr std::ptrdiff_t m_displayText = 0x30; // CUtlString
+}
+
+namespace CSSDSMsg_PostLayer { // CSSDSMsg_LayerBase
+}
+
+namespace CSSDSMsg_PreLayer { // CSSDSMsg_LayerBase
 }
 
 namespace CSSDSMsg_ViewRender {
